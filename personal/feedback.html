@@ -1,0 +1,117 @@
+<!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+<!DOCTYPE html>
+<html lang="en">
+<!--Basics-->
+
+<head>
+	<meta charset="utf-8">
+	<title>Feedback</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+
+
+	<script>
+		function validateForm() {
+			"use strict";
+			var isvalid = true;
+			if (document.getElementById("visitor").value == '') {
+				document.getElementById("visitor").style.borderColor = "red";
+				document.getElementById("visitor").style.backgroundColor = 'pink';
+				isvalid = false;
+			}
+			else {
+				isvalid = true;
+				document.getElementById("visitor").style = null;
+			}
+			console.log("is name ok? " + isvalid);
+			return (isvalid);
+		}
+		
+	</script>
+
+</head>
+<!--Menu-->
+<ul>
+	<li><img class="logo" src="assets/images/icon.png" alt="picture"></li>
+	<li><a href="index.html">Home</a></li>
+	<li><a href="news.asp">Night Life</a></li>
+	<li><a href="contact.asp">Food</a></li>
+	<li><a href="about.asp">Sports</a></li>
+	<li><a href="contact.asp">Museums</a></li>
+	<li><a class="current" href="about.asp">Feedback</a></li>
+</ul>
+<!--Form-->
+<form action="process.php" method="POST" onsubmit="return validateForm();">
+
+	<div id="headingquestion">
+		<h2 class="underline">
+			<!-- add bottom border to this -->
+			Please tell us about your visit
+		</h2>
+	</div>
+
+
+	Enter your name
+	<input type="text" id="visitor" name="visitor" placeholder="Required Entry">
+	<span class="astric"> * </span>
+
+
+	<!-- Group number form-->
+	How many people in your group:
+	<input type="number" name="groupNum" min="0" max="100" step="1" value="6" style="margin-bottom: 20px;">
+
+
+	<!-- Date documenting when they visited -->
+	When did you visit?
+	<input type="date" id="visitDate" name="vdate" />
+	<span class="astric"> * </span><br />
+	<p id="errorMessage"></p>
+
+
+	<!-- Field Set for favorite place -->
+	<fieldset>
+		<legend>Favorite type of food - Must Select one</legend>
+		<input type="radio" name="fplace" value="Italian" id="i"><label for="i">Italian</label><br>
+		<input type="radio" name="fplace" value="Jamaican" id="j"><label for="j">Jamaican</label><br>
+		<input type="radio" name="fplace" value="French" id="f"><label for="f">French</label><br>
+		<input type="radio" name="fplace" value="Chineese" id="c"><label for="c">Chineese</label><br>
+	</fieldset>
+	<br>
+	<br>
+	<!--Checkbox-->
+	<fieldset>
+		<legend>Favorite Sport</legend>
+		<input type="checkbox" name="Baseball" value="Baseball" id="b"><label for="b">Baseball</label><br>
+		<input type="checkbox" name="Football" value="Football" id="Football"><label for="Football">Football</label><br>
+		<input type="checkbox" name="Soccer" value="Soccer" id="s"><label for="s">Soccer</label><br>
+		<input type="checkbox" name="Drag Racing" value="Drag Racing" id="dr"><label for="dr">Drag Racing</label><br>
+	</fieldset>
+
+
+
+	<!-- Scrollbar for town raiting -->
+	<br>Please rate Plymouth, MI<br>
+	<p>0
+		<input type="range" name="rating" min="0" max="10" step="1" list="set">
+		<datalist id="set">
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+		</datalist>
+		10
+	</p>
+
+
+	<div id="button">
+		<input type="submit">
+		
+
+	</div><!-- end of div for submit button -->
+</form>
