@@ -1,0 +1,48 @@
+/*Arsh Aneja, ISTE 230, 9/14/2022*/
+
+
+/*For menu*/
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 33px 50px;
+    text-decoration: none;
+    font-size: larger;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+.logo{
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.current{
+    text-decoration: underline;
+}
+.pic{
+  background-image: url('../images/background.jpg'); 
+  background-size:cover; 
+  height:320px; 
+  padding-top:80px;
+  
+  
+
+}
