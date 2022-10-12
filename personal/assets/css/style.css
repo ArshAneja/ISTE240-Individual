@@ -1,8 +1,6 @@
 /*Arsh Aneja, ISTE 230, 9/14/2022*/
 
-
-/*For menu*/
-  ul {
+  .top {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -24,7 +22,6 @@
     font-size: larger;
   }
   
-  /* Change the link color to #111 (black) on hover */
   li a:hover {
     background-color: #111;
   }
@@ -37,12 +34,135 @@
 .current{
     text-decoration: underline;
 }
+
+
+
+.foot{
+   list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    justify-content: space-around;
+}
+.bott{
+  display: block;
+  text-align: center;
+  padding: 1px 55px;
+  text-decoration: none;
+  font-size: 12px;
+}
+.bott a{
+  color:black;
+}
+.bott a:hover{
+  background-color: white;
+  
+}
 .pic{
   background-image: url('../images/background.jpg'); 
   background-size:cover; 
   height:320px; 
   padding-top:80px;
+}
+
+.title{
+  display: table;
+  margin: 0px auto 0px auto;
+  padding:5px;
+  font-size:20px;
+  background-color:black;
+  color:hotpink;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.map{
+  margin-top: 8px;
+  grid-column: 1;
+  grid-row: 1 / 5;
+}
+.text{
+  margin-top: 8px;
+  grid-column: 2;
+  grid-row: 1 / 5;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 12px;
+}
+p{
+  margin-left: 20px;
+  font-size: 25px;
+  line-height: 1.6;
+}
+.festival{
+  background-image: url('../images/fest.jpg'); 
+  background-size:cover; 
+  height:320px; 
+  padding-top:80px;
+}
+.festival_title{
+  display: table;
+  margin: 0px auto 0px auto;
+  padding:5px;
+  font-size:20px;
+  background-color:black;
+  color:wheat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.night_title{
   
+    display: table;
+    margin: 0px auto 0px auto;
+    padding:5px;
+    font-size:20px;
+    background-color:black;
+    color:lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
   
 
+}
+.night{
+  background-image: url('../images/carsdark.jpg'); 
+  background-size:cover; 
+  height:320px; 
+  padding-top:80px;
+}
+.sports{
+  background-image: url('../images/knicks.jpeg'); 
+  background-size:cover; 
+  height:320px; 
+  padding-top:80px;
+}
+.food{
+  background-image: url('../images/foodhall.jpg'); 
+  background-size:cover; 
+  height:320px; 
+  padding-top:80px;
+}
+.food_title{
+  
+  display: table;
+  margin: 0px auto 0px auto;
+  padding:5px;
+  font-size:20px;
+  background-color:black;
+  color:teal;
+  font-family: Arial, Helvetica, sans-serif;
+
+
+}
+.sports_title{
+  display: table;
+  margin: 0px auto 0px auto;
+  padding:5px;
+  font-size:20px;
+  background-color:black;
+  color: lightgreen;
+  font-family: Arial, Helvetica, sans-serif;
 }
